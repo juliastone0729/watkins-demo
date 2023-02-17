@@ -40,7 +40,7 @@ custom-foot: js/timeline-js.html
         </th>
         <td>
             <div class="row">
-                {%- assign inYear = items | where_exp: 'item', 'item.date contains year' -%}
+                {%- assign inYear = items | where_exp: 'item', 'item.depth contains year' -%}
                 {% for item in inYear %}
                 <div class="col-lg-4 col-md-6">
                     <a href="{{ '/item.html' | relative_url | append: '?id=' | append: item.objectid }}" >
